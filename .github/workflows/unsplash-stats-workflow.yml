@@ -2,7 +2,7 @@
 on:
   push: # Push
   schedule: # And every hour (to update stats hourly)
-    - cron: "0 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   unsplash_stats_job:
