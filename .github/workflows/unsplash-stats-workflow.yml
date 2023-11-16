@@ -10,13 +10,13 @@ jobs:
     name: Updates Unsplash stats and blog posts
 
     steps:
-    - name: Grammarly
+    - name: Checkout
       uses: actions/checkout@v2
 
     # Collect and update markdown with Unsplash stats
     - name: Gathering Unsplash stats
       uses: gabrieluizramos/unsplash-stats-workflow@master
       with:
-        username: grammerly # your unsplash username
+        username: Grammarly # your unsplash username
         ACCESS_KEY: ${{ secrets.ACCESS_KEY }} # your unsplash ACCESS_KEY
         SECRET_KEY: ${{ secrets.SECRET_KEY }} 
