@@ -1,0 +1,22 @@
+# Runs on
+on:
+  push: # Push
+  schedule: # And every hour (to update stats hourly)
+    - cron: "0 * * * *"
+
+jobs:
+  unsplash_stats_job:
+    runs-on: ubuntu-latest
+    name: Updates Unsplash stats and blog posts
+
+    steps:
+    - name: Grammarly
+      uses: actions/checkout@v2
+
+    # Collect and update markdown with Unsplash stats
+    - name: Gathering Unsplash stats
+      uses: gabrieluizramos/unsplash-stats-workflow@master
+      with:
+        username: gabrieluizramos # your unsplash username
+        ACCESS_KEY: rEOsB7Z6-4secsYxstrC4aR-c2q0sBEWP-8BE58q6Yo # your unsplash ACCESS_KEY
+        SECRET_KEY: A5TZhjpq-kL8QA8WvjBTrGdAZmb2JPFibxGw_hqnSP8 # your unsplash SECRET_KEY
