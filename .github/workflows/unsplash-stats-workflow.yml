@@ -15,7 +15,7 @@ jobs:
 
     # Collect and update markdown with Unsplash stats
     - name: Gathering Unsplash stats
-      uses: gabrieluizramos/unsplash-stats-workflow@master
+      uses: gabrieluizramos/unsplash-stats-workflow@v1.0.0
       with:
         username: grammerly # your unsplash username
         ACCESS_KEY: ${{ secrets.ACCESS_KEY }} # your unsplash ACCESS_KEY
