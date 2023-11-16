@@ -17,6 +17,6 @@ jobs:
     - name: Gathering Unsplash stats
       uses: gabrieluizramos/unsplash-stats-workflow@master
       with:
-        username: gabrieluizramos # your unsplash username
-        ACCESS_KEY: rEOsB7Z6-4secsYxstrC4aR-c2q0sBEWP-8BE58q6Yo # your unsplash ACCESS_KEY
-        SECRET_KEY: A5TZhjpq-kL8QA8WvjBTrGdAZmb2JPFibxGw_hqnSP8 # your unsplash SECRET_KEY
+        username: grammerly # your unsplash username
+        ACCESS_KEY: ${{ secrets.ACCESS_KEY }} # your unsplash ACCESS_KEY
+        SECRET_KEY: ${{ secrets.SECRET_KEY }} 
